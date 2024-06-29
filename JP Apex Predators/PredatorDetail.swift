@@ -28,12 +28,10 @@ struct PredatorDetail: View {
                         .offset(y: 20)
                 }
                 VStack(alignment: .leading) {
-                    //Dino Name
                     Text(predator.name)
                         .font(.largeTitle)
                     //Current Location
                     
-                    //Apprears in
                     Text("Appears In:")
                         .font(.title3)
                     
@@ -42,7 +40,6 @@ struct PredatorDetail: View {
                             .font(.subheadline)
                     }
                     
-                    //Movie moments
                     Text("Movie Moments")
                         .font(.title)
                         .padding(.top, 15)
@@ -55,13 +52,15 @@ struct PredatorDetail: View {
                             .padding(.bottom, 15)
                     }
                     
-                    //Link to web page
                 Text("Read More:")
                         .font(.caption)
                     
                     Link(predator.link, destination: URL(string: predator.link)!)
+                        .font(.caption)
+                        .foregroundStyle(.blue)
                 }
                 .padding()
+                .padding(.bottom, 20)
                 .frame(width: geo.size.width, alignment: .leading)
             }
         .ignoresSafeArea()
